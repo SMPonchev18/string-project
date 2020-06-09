@@ -6,3 +6,4 @@ int hardDifficultyBoard();
 int masterDifficultyBoard();
 void wordsEasy();
 int searchEasy();
+int searchMedium();

@@ -21,18 +21,18 @@ int searchEasy()
 			cin >> number;
 		};
 	}
+	cout << "Start collumn:" << endl;
+	cin >> startCol;
+	cout << "Start row:" << endl;
+	cin >> startRow;
+	cout << "End collumn:" << endl;
+	cin >> endCol;
+	cout << "End row:" << endl;
+	cin >> endRow;
+	found = false;
 	if (number == 1)
 	{
 		//Seek
-		found = false;
-		cout << "Start collumn:" << endl;
-		cin >> startCol;
-		cout << "Start row:" << endl;
-		cin >> startRow;
-		cout << "End collumn:" << endl;
-		cin >> endCol;
-		cout << "End row:" << endl;
-		cin >> endRow;
 		if (startCol == 1 && startRow == 6 && endCol == 4 && endRow == 3)
 		{
 			cout << "You found 'Seek'!" << endl;
@@ -41,22 +41,13 @@ int searchEasy()
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Seek'." << endl;
-			return 0;
+			return 0; 
 		}
 
 	}
 	if (number == 2)
 	{
 		//Find
-		found = false;
-		cout << "Start collumn:" << endl;
-		cin >> startCol;
-		cout << "Start row:" << endl;
-		cin >> startRow;
-		cout << "End collumn:" << endl;
-		cin >> endCol;
-		cout << "End row:" << endl;
-		cin >> endRow;
 		if (startCol == 4 && startRow == 1 && endCol == 7 && endRow == 4)
 		{
 			cout << "You found 'Find'!" << endl;
@@ -72,15 +63,6 @@ int searchEasy()
 	if (number == 3)
 	{
 		//Random
-		found = false;
-		cout << "Start collumn:" << endl;
-		cin >> startCol;
-		cout << "Start row:" << endl;
-		cin >> startRow;
-		cout << "End collumn:" << endl;
-		cin >> endCol;
-		cout << "End row:" << endl;
-		cin >> endRow;
 		if (startCol == 0 && startRow == 1 && endCol == 0 && endRow == 6)
 		{
 			cout << "You found 'Random'!" << endl;
@@ -95,15 +77,6 @@ int searchEasy()
 	if (number == 4)
 	{
 		//sleuth
-		found = false;
-		cout << "Start collumn:" << endl;
-		cin >> startCol;
-		cout << "Start row:" << endl;
-		cin >> startRow;
-		cout << "End collumn:" << endl;
-		cin >> endCol;
-		cout << "End row:" << endl;
-		cin >> endRow;
 		if (startCol == 4 && startRow == 9 && endCol == 9 && endRow == 9)
 		{
 			cout << "You found 'Sleuth'!" << endl;
@@ -118,15 +91,6 @@ int searchEasy()
 	if (number == 5)
 	{
 		//Backward
-		found = false;
-		cout << "Start collumn:" << endl;
-		cin >> startCol;
-		cout << "Start row:" << endl;
-		cin >> startRow;
-		cout << "End collumn:" << endl;
-		cin >> endCol;
-		cout << "End row:" << endl;
-		cin >> endRow;
 		if (startCol == 9 && startRow == 1 && endCol == 9 && endRow == 8)
 		{
 			cout << "You found 'Backward'!" << endl;
@@ -141,15 +105,6 @@ int searchEasy()
 	if (number == 6)
 	{
 		//Vertical
-		found = false;
-		cout << "Start collumn:" << endl;
-		cin >> startCol;
-		cout << "Start row:" << endl;
-		cin >> startRow;
-		cout << "End collumn:" << endl;
-		cin >> endCol;
-		cout << "End row:" << endl;
-		cin >> endRow;
 		if (startCol == 1 && startRow == 0 && endCol == 8 && endRow == 0)
 		{
 			cout << "You found 'Vertical'!" << endl;
@@ -164,15 +119,6 @@ int searchEasy()
 	if (number == 7)
 	{
 		//Diagonal
-		found = false;
-		cout << "Start collumn:" << endl;
-		cin >> startCol;
-		cout << "Start row:" << endl;
-		cin >> startRow;
-		cout << "End collumn:" << endl;
-		cin >> endCol;
-		cout << "End row:" << endl;
-		cin >> endRow;
 		if (startCol == 6 && startRow == 8 && endCol == 6 && endRow == 1)
 		{
 			cout << "You found 'Diagonal'!" << endl;
@@ -187,15 +133,6 @@ int searchEasy()
 	if (number == 8)
 	{
 		//Wikipedia
-		found = false;
-		cout << "Start collumn:" << endl;
-		cin >> startCol;
-		cout << "Start row:" << endl;
-		cin >> startRow;
-		cout << "End collumn:" << endl;
-		cin >> endCol;
-		cout << "End row:" << endl;
-		cin >> endRow;
 		if (startCol == 3 && startRow == 9 && endCol == 3 && endRow == 1)
 		{
 			cout << "You found 'Wikipedia'!" << endl;
@@ -210,15 +147,6 @@ int searchEasy()
 	if (number == 9)
 	{
 		//Horizontal
-		found = false;
-		cout << "Start collumn:" << endl;
-		cin >> startCol;
-		cout << "Start row:" << endl;
-		cin >> startRow;
-		cout << "End collumn:" << endl;
-		cin >> endCol;
-		cout << "End row:" << endl;
-		cin >> endRow;
 		if (startCol == 0 && startRow == 9 && endCol == 9 && endRow == 0)
 		{
 			cout << "You found 'Horizontal'!" << endl;
@@ -233,15 +161,6 @@ int searchEasy()
 	if (number == 10)
 	{
 		//Word Search
-		found = false;
-		cout << "Start collumn:" << endl;
-		cin >> startCol;
-		cout << "Start row:" << endl;
-		cin >> startRow;
-		cout << "End collumn:" << endl;
-		cin >> endCol;
-		cout << "End row:" << endl;
-		cin >> endRow;
 		if (startCol == 0 && startRow == 0 && endCol == 9 && endRow == 9)
 		{
 			cout << "You found 'Word Search'!" << endl;
@@ -253,6 +172,158 @@ int searchEasy()
 			return 0;
 		}
 	}
+	return 0;
+}
+int searchMedium()
+{
+	int number;
+	bool found;
 
+	int   startCol = 0, startRow = 0, endCol = 0, endRow = 0;
+	cout << "Please type which word you will be searching for:" << endl;
+	cin >> number;
+	int* a = &number;
+	if (number < 1 or number>18)
+	{
+		while (number < 1 or number>18)
+		{
+			cout << "Incorrect input!" << endl;
+			cout << "Please, try again." << endl;
+			cin >> number;
+		};
+	}
+	cout << "Start row:" << endl;
+	cin >> startRow;
+	cout << "End collumn:" << endl;
+	cin >> endCol;
+	cout << "End row:" << endl;
+	found = false;
+	if (number == 1)
+	{
+		//Attitude
+		if (startCol == 0 && startRow == 7 && endCol == 7 && endRow == 0)
+		{
+			cout << "You found 'Attitude'!" << endl;
+			found = true;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Attitude'." << endl;
+			return 0;
+		}
+
+	}
+	if (number == 2)
+	{
+		//Harmony
+		if (startCol == 6 && startRow == 6 && endCol == 0 && endRow == 0)
+		{
+			cout << "You found 'Harmony'!" << endl;
+			found = true;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Harmony'." << endl;
+			return 0;
+		}
+	}
+	if (number == 3)
+	{
+		//Love
+		if (startCol == 3 && startRow == 5 && endCol == 0 && endRow == 8)
+		{
+			cout << "You found 'Love'!" << endl;
+			found = true;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Love'." << endl;
+			return 0;
+		}
+	}
+	if (number == 4)
+	{
+		//Peace
+		if (startCol == 8 && startRow == 9 && endCol == 12 && endRow == 13)
+		{
+			cout << "You found 'Peace'!" << endl;
+			found = true;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Peace'." << endl;
+			return 0;
+		}
+	}
+	if (number == 5)
+	{
+		//Powerful
+		if (startCol == 0 && startRow == 9 && endCol == 7 && endRow == 9)
+		{
+			cout << "You found 'Powerful'!" << endl;
+			found = true;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Powerful'." << endl;
+			return 0;
+		}
+	}
+	if (number == 6)
+	{
+		//Pure
+		if (startCol == 0 && startRow == 3 && endCol == 0 && endRow == 6)
+		{
+			cout << "You found 'Pure'!" << endl;
+			found = true;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Pure'." << endl;
+			return 0;
+		}
+	}
+	if (number == 7)
+	{
+		//Receptive
+		if (startCol == 14 && startRow == 13 && endCol == 6 && endRow == 5)
+		{
+			cout << "You found 'Receptive'!" << endl;
+			found = true;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Receptive'." << endl;
+			return 0;
+		}
+	}
+	if (number == 8)
+	{
+		//Success
+		if (startCol == 8 && startRow == 14 && endCol == 14 && endRow == 8)
+		{
+			cout << "You found 'Success'!" << endl;
+			found = true;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Success'." << endl;
+			return 0;
+		}
+	}
+	if (number == 9)
+	{
+		//Will-Power
+		if (startCol == 9 && startRow == 0 && endCol == 1 && endRow == 8)
+		{
+			cout << "You found 'Will-Power'!" << endl;
+			found = true;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Will-Power'." << endl;
+			return 0;
+		}
+	}
 	return 0;
 }
