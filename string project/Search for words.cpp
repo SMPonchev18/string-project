@@ -365,5 +365,149 @@ int searchMedium()
 			return 0;
 		}
 	}
+	if (number == 10)
+	{
+		//Freedom
+		if (startCol == 11 && startRow == 6 && endCol == 11 && endRow == 0)
+		{
+			cout << "You found 'Freedom'!" << endl;
+			found = true;
+			score += 20;
+			cout << "Your score is :" << score << endl;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Freedom'." << endl;
+			return 0;
+		}
+	}
+	if (number == 11)
+	{
+		//High-energy
+		if (startCol == 12 && startRow == 0 && endCol == 12 && endRow == 9)
+		{
+			cout << "You found 'High-energy'!" << endl;
+			found = true;
+			score += 20;
+			cout << "Your score is :" << score << endl;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'High-energy'." << endl;
+			return 0;
+		}
+	}
+	if (number == 12)
+	{
+		//Motivation
+		if (startCol == 11 && startRow == 8 && endCol == 2 && endRow == 8)
+		{
+			cout << "You found 'Motivation'!" << endl;
+			found = true;
+			score += 20;
+			cout << "Your score is :" << score << endl;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Motivation'." << endl;
+			return 0;
+		}
+	}
+	if (number == 13)
+	{
+		//Positive
+		if (startCol == 13 && startRow == 8 && endCol == 13 && endRow == 1)
+		{
+			cout << "You found 'Positive'!" << endl;
+			found = true;
+			score += 20;
+			cout << "Your score is :" << score << endl;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Positive'." << endl;
+			return 0;
+		}
+	}
+	if (number == 14)
+	{
+		//Progress
+		if (startCol == 4 && startRow == 0 && endCol == 11 && endRow == 7)
+		{
+			cout << "You found 'Progress'!" << endl;
+			found = true;
+			score += 20;
+			cout << "Your score is :" << score << endl;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Progress'." << endl;
+			return 0;
+		}
+	}
+	if (number == 15)
+	{
+		//Quality
+		if (startCol == 6 && startRow == 11 && endCol == 0 && endRow == 11)
+		{
+			cout << "You found 'Quality'!" << endl;
+			found = true;
+			score += 20;
+			cout << "Your score is :" << score << endl;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Quality'." << endl;
+			return 0;
+		}
+	}
+	if (number == 16)
+	{
+		//Self-discovery
+		if (startCol == 2 && startRow == 0 && endCol == 14 && endRow == 12)
+		{
+			cout << "You found 'Self-discovery'!" << endl;
+			found = true;
+			score += 20;
+			cout << "Your score is :" << score << endl;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Self-discovery." << endl;
+			return 0;
+		}
+	}
+	if (number == 17)
+	{
+		//Victory
+		if (startCol == 0 && startRow == 13 && endCol == 6 && endRow == 13)
+		{
+			cout << "You found 'Victory'!" << endl;
+			found = true;
+			score += 20;
+			cout << "Your score is :" << score << endl;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Victory'." << endl;
+			return 0;
+		}
+	}
+	if (number == 18)
+	{
+		//Yourself
+		if (startCol == 14 && startRow == 0 && endCol == 14 && endRow == 7)
+		{
+			cout << "You found 'Yourself'!" << endl;
+			found = true;
+			score += 20;
+			cout << "Your score is :" << score << endl;
+		}
+		if (found == false)
+		{
+			cout << "Sorry, you didn't find 'Yourself'." << endl;
+			return 0;
+		}
+	}
 	return 0;
 }
