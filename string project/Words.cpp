@@ -20,3 +20,12 @@ void wordsMedium()
         cout << i << ". " << wordsM[i] << endl;
     }
 }
+void wordsHard()
+{
+    string wordsH[18] = { "","Addition","Commutative","Expresion","Product","Multiplication","Array","Distributive","Groups",
+        "Properties","Associative","Equal","Related","Repeated","Column","Row","Factor","Equation" };
+    for (int i = 1; i < 18; i++)
+    {
+        cout << i << ". " << wordsH[i] << endl;
+    }
+}
