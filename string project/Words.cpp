@@ -3,6 +3,7 @@
 #include <string>
 #include "Header.h";
 using namespace std;
+//Function to show the words from the easy board
 void wordsEasy()
 {
     string wordsE[11] = { "","Seek","Find","Random","Sleuth","Backward","Vertical","Diagonal","Wikipedia","Horizontal","Word Search" };
@@ -11,6 +12,7 @@ void wordsEasy()
         cout << i << ". " << wordsE[i] << endl;
     }
 }
+//Function to show the words from the medium board
 void wordsMedium()
 {
     string wordsM[19] = { "","Attitude","Harmony","Love","Peace","Powerful","Pure","Receptive","Success","Will-Power",
@@ -20,6 +22,7 @@ void wordsMedium()
         cout << i << ". " << wordsM[i] << endl;
     }
 }
+//Function to show the words from the hard board
 void wordsHard()
 {
     string wordsH[18] = { "","Addition","Commutative","Expresion","Product","Multiplication","Array","Distributive","Groups",

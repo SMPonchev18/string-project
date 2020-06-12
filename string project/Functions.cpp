@@ -15,6 +15,7 @@ bool Menu(int& Flag)
     cout << "1. Play" << endl;
     cout << "2. Exit" << endl;
     cin >> n;
+	//Check if the person wants to play or not
     if (n < 1 or n>2)
     {
         while (n < 1 or n>2)
@@ -36,6 +37,7 @@ bool Menu(int& Flag)
         cout << "2. Medium" << endl;
         cout << "3. Hard" << endl;
         cin >> difficulty;
+		//Check if the person has chosen a difficulty properly
         if (difficulty < 1 or difficulty>3)
         {
             while (difficulty < 1 or difficulty>3)
