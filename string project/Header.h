@@ -5,5 +5,7 @@ int mediumDifficultyBoard();
 int hardDifficultyBoard();
 int masterDifficultyBoard();
 void wordsEasy();
+void wordsMedium();
+void wordsHard();
 int searchEasy();
 int searchMedium();

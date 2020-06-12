@@ -3,18 +3,20 @@
 #include <string>
 #include "Header.h";
 using namespace std;
-
-int score=0;
-
+int score = 0, index, number;
+bool found;
+int startCol = 0, startRow = 0, endCol = 0, endRow = 0;
+int foundLengthEasy = 0, foundWordsEasy[10];
+int foundLengthMedium = 0, foundWordsMedium[19];
 int searchEasy()
 {
-	int number;
-	bool found;
-
-	int   startCol = 0, startRow = 0, endCol = 0, endRow = 0;
+	if (foundLengthEasy == 9)
+	{
+		cout << "Congratulations!" << endl;
+		cout << "You have found all the words in this level." << endl;
+	}
 	cout << "Please type which word you will be searching for:" << endl;
 	cin >> number;
-	int* a = &number;
 	if (number < 1 or number>10)
 	{
 		while (number < 1 or number>10)
@@ -23,6 +25,14 @@ int searchEasy()
 			cout << "Please, try again." << endl;
 			cin >> number;
 		};
+	}
+	for (int i = 0; i <= foundLengthEasy; i++)
+	{
+		if (number == foundWordsEasy[i])
+		{
+			cout << "You have already found this word." << endl;
+			return 0;
+		}
 	}
 	cout << "Start collumn:" << endl;
 	cin >> startCol;
@@ -40,15 +50,11 @@ int searchEasy()
 		{
 			cout << "You found 'Seek'!" << endl;
 			found = true;
-			score += 10;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Seek'." << endl;
-			return 0; 
 		}
-
 	}
 	if (number == 2)
 	{
@@ -57,13 +63,10 @@ int searchEasy()
 		{
 			cout << "You found 'Find'!" << endl;
 			found = true;
-			score += 10;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Find'." << endl;
-			return 0;
 		}
 
 	}
@@ -74,13 +77,10 @@ int searchEasy()
 		{
 			cout << "You found 'Random'!" << endl;
 			found = true;
-			score += 10;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Random'." << endl;
-			return 0;
 		}
 	}
 	if (number == 4)
@@ -90,13 +90,10 @@ int searchEasy()
 		{
 			cout << "You found 'Sleuth'!" << endl;
 			found = true;
-			score += 10;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Sleuth'." << endl;
-			return 0;
 		}
 	}
 	if (number == 5)
@@ -106,13 +103,10 @@ int searchEasy()
 		{
 			cout << "You found 'Backward'!" << endl;
 			found = true;
-			score += 10;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Backward'." << endl;
-			return 0;
 		}
 	}
 	if (number == 6)
@@ -122,13 +116,10 @@ int searchEasy()
 		{
 			cout << "You found 'Vertical'!" << endl;
 			found = true;
-			score += 10;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Vertical'." << endl;
-			return 0;
 		}
 	}
 	if (number == 7)
@@ -138,13 +129,10 @@ int searchEasy()
 		{
 			cout << "You found 'Diagonal'!" << endl;
 			found = true;
-			score += 10;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Diagonal'." << endl;
-			return 0;
 		}
 	}
 	if (number == 8)
@@ -154,13 +142,10 @@ int searchEasy()
 		{
 			cout << "You found 'Wikipedia'!" << endl;
 			found = true;
-			score += 10;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Wikipedia'." << endl;
-			return 0;
 		}
 	}
 	if (number == 9)
@@ -170,13 +155,10 @@ int searchEasy()
 		{
 			cout << "You found 'Horizontal'!" << endl;
 			found = true;
-			score += 10;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Horizontal'." << endl;
-			return 0;
 		}
 	}
 	if (number == 10)
@@ -186,26 +168,31 @@ int searchEasy()
 		{
 			cout << "You found 'Word Search'!" << endl;
 			found = true;
-			score += 10;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Word Search'." << endl;
-			return 0;
 		}
 	}
+	if (found == true)
+	{
+		score += 20;
+		index = foundLengthEasy;
+		foundWordsEasy[index] = number;
+		foundLengthEasy++;
+	}
+	cout << "Your score is: " << score << endl;
 	return 0;
 }
 int searchMedium()
 {
-	int number;
-	bool found;
-
-	int   startCol = 0, startRow = 0, endCol = 0, endRow = 0;
+	if (foundLengthMedium == 17)
+	{
+		cout << "Congratulations!" << endl;
+		cout << "You have found all the words in this level." << endl;
+	}
 	cout << "Please type which word you will be searching for:" << endl;
 	cin >> number;
-	int* a = &number;
 	if (number < 1 or number>18)
 	{
 		while (number < 1 or number>18)
@@ -215,11 +202,22 @@ int searchMedium()
 			cin >> number;
 		};
 	}
+	for (int i = 0; i <= foundLengthMedium; i++)
+	{
+		if (number == foundWordsMedium[i])
+		{
+			cout << "You have already found this word." << endl;
+			return 0;
+		}
+	}
+	cout << "Start collumn:" << endl;
+	cin >> startCol;
 	cout << "Start row:" << endl;
 	cin >> startRow;
 	cout << "End collumn:" << endl;
 	cin >> endCol;
 	cout << "End row:" << endl;
+	cin >> endRow;
 	found = false;
 	if (number == 1)
 	{
@@ -228,13 +226,10 @@ int searchMedium()
 		{
 			cout << "You found 'Attitude'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Attitude'." << endl;
-			return 0;
 		}
 
 	}
@@ -245,13 +240,10 @@ int searchMedium()
 		{
 			cout << "You found 'Harmony'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Harmony'." << endl;
-			return 0;
 		}
 	}
 	if (number == 3)
@@ -261,13 +253,10 @@ int searchMedium()
 		{
 			cout << "You found 'Love'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Love'." << endl;
-			return 0;
 		}
 	}
 	if (number == 4)
@@ -277,12 +266,10 @@ int searchMedium()
 		{
 			cout << "You found 'Peace'!" << endl;
 			found = true;
-			score += 20;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Peace'." << endl;
-			return 0;
 		}
 	}
 	if (number == 5)
@@ -292,13 +279,10 @@ int searchMedium()
 		{
 			cout << "You found 'Powerful'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Powerful'." << endl;
-			return 0;
 		}
 	}
 	if (number == 6)
@@ -308,13 +292,10 @@ int searchMedium()
 		{
 			cout << "You found 'Pure'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Pure'." << endl;
-			return 0;
 		}
 	}
 	if (number == 7)
@@ -324,13 +305,10 @@ int searchMedium()
 		{
 			cout << "You found 'Receptive'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Receptive'." << endl;
-			return 0;
 		}
 	}
 	if (number == 8)
@@ -340,13 +318,10 @@ int searchMedium()
 		{
 			cout << "You found 'Success'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Success'." << endl;
-			return 0;
 		}
 	}
 	if (number == 9)
@@ -356,13 +331,10 @@ int searchMedium()
 		{
 			cout << "You found 'Will-Power'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Will-Power'." << endl;
-			return 0;
 		}
 	}
 	if (number == 10)
@@ -372,13 +344,10 @@ int searchMedium()
 		{
 			cout << "You found 'Freedom'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Freedom'." << endl;
-			return 0;
 		}
 	}
 	if (number == 11)
@@ -388,13 +357,10 @@ int searchMedium()
 		{
 			cout << "You found 'High-energy'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'High-energy'." << endl;
-			return 0;
 		}
 	}
 	if (number == 12)
@@ -404,13 +370,10 @@ int searchMedium()
 		{
 			cout << "You found 'Motivation'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Motivation'." << endl;
-			return 0;
 		}
 	}
 	if (number == 13)
@@ -420,13 +383,10 @@ int searchMedium()
 		{
 			cout << "You found 'Positive'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Positive'." << endl;
-			return 0;
 		}
 	}
 	if (number == 14)
@@ -436,13 +396,10 @@ int searchMedium()
 		{
 			cout << "You found 'Progress'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Progress'." << endl;
-			return 0;
 		}
 	}
 	if (number == 15)
@@ -452,13 +409,10 @@ int searchMedium()
 		{
 			cout << "You found 'Quality'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Quality'." << endl;
-			return 0;
 		}
 	}
 	if (number == 16)
@@ -468,13 +422,10 @@ int searchMedium()
 		{
 			cout << "You found 'Self-discovery'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Self-discovery." << endl;
-			return 0;
 		}
 	}
 	if (number == 17)
@@ -484,13 +435,10 @@ int searchMedium()
 		{
 			cout << "You found 'Victory'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Victory'." << endl;
-			return 0;
 		}
 	}
 	if (number == 18)
@@ -500,14 +448,19 @@ int searchMedium()
 		{
 			cout << "You found 'Yourself'!" << endl;
 			found = true;
-			score += 20;
-			cout << "Your score is :" << score << endl;
 		}
 		if (found == false)
 		{
 			cout << "Sorry, you didn't find 'Yourself'." << endl;
-			return 0;
 		}
 	}
+	if (found == true)
+	{
+		score += 20;
+		index = foundLengthMedium;
+		foundWordsMedium[index] = number;
+		foundLengthMedium++;
+	}
+	cout << "Your score is: " << score << endl;
 	return 0;
 }
