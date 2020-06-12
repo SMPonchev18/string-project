@@ -17,7 +17,7 @@ bool Menu(int& Flag)
     cin >> n;
     if (n < 1 or n>2)
     {
-        while (true)
+        while (n < 1 or n>2)
         {
             cout << "Incorrect input!" << endl;
             cout << "Please, try again." << endl;
@@ -35,11 +35,10 @@ bool Menu(int& Flag)
         cout << "1. Easy" << endl;
         cout << "2. Medium" << endl;
         cout << "3. Hard" << endl;
-        cout << "4. Master" << endl;
         cin >> difficulty;
-        if (n < 1 or n>4)
+        if (difficulty < 1 or difficulty>3)
         {
-            while (true)
+            while (difficulty < 1 or difficulty>3)
             {
                 cout << "Incorrect input!" << endl;
                 cout << "Please, try again." << endl;
@@ -64,12 +63,6 @@ bool Menu(int& Flag)
         {
             cout << line << endl;
             hardDifficultyBoard();
-            return 0;
-        }
-        case 4:
-        {
-            cout << line << endl;
-            masterDifficultyBoard();
             return 0;
         }
         }
